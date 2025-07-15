@@ -1,0 +1,47 @@
+body {
+  background-color: darkgrey;
+  box-sizing: border-box;
+  font-size: large;
+}
+#box {
+  font-family: fantasy;
+  background-color: cadetblue;
+  display: grid;
+  margin: auto;
+  width: 400px;
+  height: 500px;
+  border: 2px black solid;
+  border-radius: 15px;
+  grid-template-columns: repeat(4, 1fr);
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.kotak,
+.hasil {
+  display: flex;
+  border: 1px black solid;
+  justify-content: center;
+  align-items: center;
+}
+
+.hasil {
+  background-color: darkslategrey;
+  overflow: hidden;
+}
+.kotak:active {
+  background-color: darkslategray;
+  padding-left: 5px;
+  padding-bottom: 5px;
+  transition: padding-left 0.1s ease, padding-bottom 0.1s ease, background-color 0.1s ease;
+  cursor: pointer;
+}
+.hasil {
+  grid-area: 1;
+  grid-column: span 4;
+}
+@media (max-width: 400px) {
+  #box {
+    width: 100%;
+  }
+}
